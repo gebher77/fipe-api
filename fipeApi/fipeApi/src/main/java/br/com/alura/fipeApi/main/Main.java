@@ -38,8 +38,6 @@ public class Main {
         }
 
         var json = consumo.obterDados(endereco);
-        System.out.println(json);
-
         var marcas = conversor.obterLista(json, Dados.class);
         marcas.stream()
                 .sorted(Comparator.comparing(Dados::codigo))
